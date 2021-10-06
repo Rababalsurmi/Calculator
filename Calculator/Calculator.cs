@@ -33,6 +33,12 @@ namespace CalculatorProgram
                 Console.Write("Type another number, and then press Enter: ");
                 double cleanNum2;
                 cleanNum2 = GetNumberFromUser();
+                
+                double[] n = new double[10];
+                for (int i = 0; i < 10; i++)
+                {
+                    n[i] = GetNumberFromUser();
+                }
 
                 Console.WriteLine("Choose an operator from the following list:");
                 Console.WriteLine("\ta - Add");
