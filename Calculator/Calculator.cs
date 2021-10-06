@@ -22,7 +22,7 @@ namespace CalculatorProgram
 
             while (!endApp)
             {
-                double result = 0;
+                double result;
 
                 // Ask the user to type the first number.
                 Console.Write("Type a number, and then press Enter: ");
