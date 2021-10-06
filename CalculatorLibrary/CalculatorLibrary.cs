@@ -58,12 +58,40 @@ namespace CalculatorLibrary
             Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             return result;
         }
+        public static double Add(double num1, double num2, params double[] n)
+        {
+            double result = double.NaN;
+            Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+            Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
+            if (n != null)
+            {
+                foreach (int i in n)
+                {
+                    result += i;
+                }
+            }
+            return result;
+        }
 
         public static double Subtract(double num1, double num2)
         {
             double result = double.NaN;
             Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
             Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
+            return result;
+        }
+        public static double Subtract(double num1, double num2, params double[] n)
+        {
+            double result = double.NaN;
+            Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+            Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
+            if (n != null)
+            {
+                foreach (int i in n)
+                {
+                    result += i;
+                }
+            }
             return result;
         }
 
