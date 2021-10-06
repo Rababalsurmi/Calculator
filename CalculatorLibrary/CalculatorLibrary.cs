@@ -89,7 +89,7 @@ namespace CalculatorLibrary
             {
                 foreach (int i in n)
                 {
-                    result += i;
+                    result -= i;
                 }
             }
             return result;
