@@ -53,7 +53,7 @@ namespace CalculatorLibrary
 
         public static double Add(double num1, double num2)
         {
-            double result = double.NaN;
+            double result = 0;
             Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
             //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             return result;
@@ -61,7 +61,7 @@ namespace CalculatorLibrary
 
         public static double Add(params double[] n)
         {
-            double result = double.NaN;
+            double result = 0;
             
             //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             if (n != null)
@@ -76,7 +76,7 @@ namespace CalculatorLibrary
 
         public static double Subtract(double num1, double num2)
         {
-            double result = double.NaN;
+            double result = 0;
             Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
             //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             return result;
@@ -84,7 +84,7 @@ namespace CalculatorLibrary
 
         public static double Subtract( double[] n)
         {
-            double result = double.NaN;
+            double result = 0;
             //Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
             //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             if (n != null)
@@ -99,7 +99,7 @@ namespace CalculatorLibrary
 
         public static double Multiply(double num1, double num2)
         {
-            double result = double.NaN;
+            double result = 0;
             Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
             //Trace.WriteLine(String.Format("{0} * {1} = {2}", num1, num2, result));
             return result;
