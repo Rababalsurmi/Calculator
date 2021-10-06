@@ -21,16 +21,16 @@ namespace CalculatorLibrary
             switch (op)
             {
                 case "a":
-                    result = Add(num1, num2);
+                     Add(num1, num2);
                     break;
                 case "s":
-                    result = Subtract(num1, num2);
+                    Subtract(num1, num2);
                     break;
                 case "m":
-                    result = Multiply(num1, num2);
+                     Multiply(num1, num2);
                     break;
                 case "d":
-                    result = Divide(num1, num2);
+                     Divide(num1, num2);
                     break;
                 default:
                     Console.WriteLine("Invalid input, try again.");
@@ -53,21 +53,24 @@ namespace CalculatorLibrary
 
         public static double Add(double num1, double num2)
         {
-            double result = 0;
-            Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+            double result;
+            result = num1 + num2;
+            Console.WriteLine($"Your result: {num1} + {num2} = " + result);
             //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             return result;
         }
 
-        public static double Add(params double[] n)
+        public static double Add(double num1, double num2, params double[] n)
         {
-            double result = 0;
-            
+            double result;
+
+            result = num1 + num2;
             //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             if (n != null)
             {
                 foreach (int i in n)
                 {
+                    
                     Console.WriteLine($"Your result: " + (result += i)); 
                 }
             }
@@ -76,15 +79,17 @@ namespace CalculatorLibrary
 
         public static double Subtract(double num1, double num2)
         {
-            double result = 0;
-            Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+            double result;
+            result = num1 - num2;
+            Console.WriteLine($"Your result: {num1} - {num2} = " + result);
             //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             return result;
         }
 
-        public static double Subtract( double[] n)
+        public static double Subtract(double num1, double num2, params double[] n)
         {
-            double result = 0;
+            double result;
+            result = num1 - num2;
             //Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
             //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             if (n != null)
@@ -99,22 +104,24 @@ namespace CalculatorLibrary
 
         public static double Multiply(double num1, double num2)
         {
-            double result = 0;
-            Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+            double result;
+            result = num1 * num2;
+            Console.WriteLine($"Your result: {num1} * {num2} = " + result);
             //Trace.WriteLine(String.Format("{0} * {1} = {2}", num1, num2, result));
             return result;
         }
 
         public static double Divide(double num1, double num2)
         {
-            double result = 0;
+            double result;
+            result = num1 / num2;
             while (num2 == 0)
             {
                 Console.WriteLine("Enter a non-zero divisor: ");
                 Console.WriteLine();
                 num2 = GetNumberFromUser();
             }
-            Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+            Console.WriteLine($"Your result: {num1} / {num2} = " + result);
             //Trace.WriteLine(String.Format("{0} / {1} = {2}", num1, num2, result));
             return result;
         }
