@@ -23,6 +23,20 @@ namespace Calculator.Tests
             //Assert
             Assert.Equal(expected, actual, 0);
         }
+        [Theory]
+        [InlineData(3, 6, 9)]
+        [InlineData(4, 3, 7)]
+        [InlineData(-10, 10, 0)]
+        [InlineData(34, 5.33, 39.33)]
+        [InlineData(-10, -10, -20)]
+        public void AddArray(double num1, double num2, double expected, params double[] n)
+        {
+            // Action
+            double actual = CalculatorLibrary.Calculator.Add(num1, num2, n);
+
+            // Assertion
+            Assert.Equal(expected, actual, 0);
+        }
 
         [Fact]
         public void Substract()
@@ -34,6 +48,20 @@ namespace Calculator.Tests
 
             //act
             var actual = CalculatorLibrary.Calculator.Subtract(x1, x2);
+
+            //assert
+            Assert.Equal(expected, actual, 0);
+        }
+        [Theory]
+        [InlineData(3, 6, 9)]
+        [InlineData(4, 3, 7)]
+        [InlineData(-10, 10, 0)]
+        [InlineData(34, 5.33, 39.33)]
+        [InlineData(-10, -10, -20)]
+        public void SubstractArray(double x1, double x2, double expected, params double[] n)
+        {
+            //act
+            var actual = CalculatorLibrary.Calculator.Subtract(x1, x2, n);
 
             //assert
             Assert.Equal(expected, actual, 0);
