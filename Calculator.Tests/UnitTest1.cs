@@ -80,7 +80,7 @@ namespace Calculator.Tests
             var actual = CalculatorLibrary.Calculator.Divide(x1, x2);
 
             //assert
-            Assert.Equal(expected, actual, 0);
+            Assert.Equal(expected, actual);
         }
 
         [Fact(Skip = "Do not run now")]
