@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Diagnostics;
 
@@ -16,7 +16,7 @@ namespace CalculatorLibrary
         }
         public double DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN;
+            double result = 0;
 
             switch (op)
             {
@@ -55,19 +55,20 @@ namespace CalculatorLibrary
         {
             double result = double.NaN;
             Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
-            Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
+            //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             return result;
         }
-        public static double Add(double num1, double num2, params double[] n)
+
+        public static double Add(params double[] n)
         {
             double result = double.NaN;
-            Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
-            Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
+            
+            //Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
             if (n != null)
             {
                 foreach (int i in n)
                 {
-                    result += i;
+                    Console.WriteLine($"Your result: " + (result += i)); 
                 }
             }
             return result;
@@ -77,19 +78,20 @@ namespace CalculatorLibrary
         {
             double result = double.NaN;
             Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
-            Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
+            //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             return result;
         }
-        public static double Subtract(double num1, double num2, params double[] n)
+
+        public static double Subtract( double[] n)
         {
             double result = double.NaN;
-            Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
-            Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
+            //Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+            //Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
             if (n != null)
             {
                 foreach (int i in n)
                 {
-                    result -= i;
+                    Console.WriteLine($"Your result: " + (result -= i));
                 }
             }
             return result;
@@ -99,13 +101,13 @@ namespace CalculatorLibrary
         {
             double result = double.NaN;
             Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
-            Trace.WriteLine(String.Format("{0} * {1} = {2}", num1, num2, result));
+            //Trace.WriteLine(String.Format("{0} * {1} = {2}", num1, num2, result));
             return result;
         }
 
         public static double Divide(double num1, double num2)
         {
-            double result = double.NaN;
+            double result = 0;
             while (num2 == 0)
             {
                 Console.WriteLine("Enter a non-zero divisor: ");
@@ -113,7 +115,7 @@ namespace CalculatorLibrary
                 num2 = GetNumberFromUser();
             }
             Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
-            Trace.WriteLine(String.Format("{0} / {1} = {2}", num1, num2, result));
+            //Trace.WriteLine(String.Format("{0} / {1} = {2}", num1, num2, result));
             return result;
         }
     }
