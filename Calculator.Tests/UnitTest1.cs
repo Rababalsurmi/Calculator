@@ -4,10 +4,10 @@ using CalculatorLibrary;
 
 namespace Calculator.Tests
 {
-    
+
     public class CalculatorTest
     {
-        
+
         [Fact]
         public void Add()
         {
@@ -29,10 +29,10 @@ namespace Calculator.Tests
         [InlineData(-10, 10, 0)]
         [InlineData(34, 5.33, 39.33)]
         [InlineData(-10, -10, -20)]
-        public void AddArray(double num1, double num2, double expected, params double[] n)
+        public void AddArray(double expected, params double[] n)
         {
             // Action
-            double actual = CalculatorLibrary.Calculator.Add(num1, num2, n);
+            double actual = CalculatorLibrary.Calculator.Add(n);
 
             // Assertion
             Assert.Equal(expected, actual, 0);
@@ -58,10 +58,10 @@ namespace Calculator.Tests
         [InlineData(-10, 10, 0)]
         [InlineData(34, 5.33, 39.33)]
         [InlineData(-10, -10, -20)]
-        public void SubstractArray(double x1, double x2, double expected, params double[] n)
+        public void SubstractArray(double expected, params double[] n)
         {
             //act
-            var actual = CalculatorLibrary.Calculator.Subtract(x1, x2, n);
+            var actual = CalculatorLibrary.Calculator.Subtract(n);
 
             //assert
             Assert.Equal(expected, actual, 0);
@@ -113,4 +113,3 @@ namespace Calculator.Tests
         }
     }
 }
-
